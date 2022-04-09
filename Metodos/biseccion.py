@@ -9,7 +9,7 @@ def bisec(xi,xs,tol,n,f):
     elif fxs == 0:
          return xs
     elif fxi*fxs < 0: 
-        xm = xi-((fxi*(xs-xi)))/(fxs-fxi)
+        xm = (xs+xi)/2
         fxm = f(xm)
         i = 1 
         error = tol +1 
@@ -21,7 +21,7 @@ def bisec(xi,xs,tol,n,f):
                 xi = xm
                 fxi = fxm
             xaux = xm 
-            xm = xi-((fxi*(xs-xi)))/(fxs-fxi)
+            xm = (xi+xs)/2
             fxm = f(xm)
             error = np.abs(xm-xaux)
             i += 1
