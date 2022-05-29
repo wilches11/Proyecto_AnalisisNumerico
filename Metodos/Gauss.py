@@ -1,7 +1,10 @@
 import numpy as np
 import sympy as sym 
 
-def eliminacion(a):
+def gaus(a):
+    return __susReg__(__eliminacion__(a))
+
+def __eliminacion__(a):
     n = len(a)
     for k in range(0,n-1):
         for i in range(k+1,n):
@@ -15,7 +18,7 @@ def eliminacion(a):
 
 
 
-def susReg(ab):
+def __susReg__(ab):
     n = len(ab)-1
     x = [0 for i in range(n)]
     k = ab[n-1][n+1]/ab[n][n]
