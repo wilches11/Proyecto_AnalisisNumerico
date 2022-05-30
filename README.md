@@ -2,7 +2,7 @@
 
 Autores
 -------
-Juan Jose Wilches , Diego Velazques & Brahyan Esteban Rios Soto
+Juan Jose Wilches , Diego Velasquez& Brahyan Esteban Rios Soto
 
 Semestre
 -------
