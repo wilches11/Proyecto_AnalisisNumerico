@@ -18,12 +18,13 @@ def secante(x0,tol,n,f,derivada1,derivdad2):
             fppx0 = derivdad2(x1)
             den = (fpx0**2)-(fx0*fppx0)
             error = np.abs(x1-x0)
+            Er = np.abs(error/x1)
             x0 = x1
             i += 1 
         if fx0 == 0:
             return x0 
         elif error<tol:
-             return [x0,error]
+             return [x0,error,Er]
         else:
             return  [x0,"Fracasó en "+str(n)+" iteraciones"]
 
