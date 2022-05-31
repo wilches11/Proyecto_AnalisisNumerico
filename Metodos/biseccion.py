@@ -24,11 +24,12 @@ def bisec(xi,xs,tol,n,f):
             xm = (xi+xs)/2
             fxm = f(xm)
             error = np.abs(xm-xaux)
+            errorRel = np.abs(error/xm)
             i += 1
         if fxm == 0:
             return xm 
         elif error<tol:
-            return [xm,"Error de "+str(error)]
+            return [xm,"Error Absoluto de "+str(error)+" Error Realtivo de "+str(errorRel)]
         else:
             return "Fracasó en "+str(n)+" iteraciones"
     else:
