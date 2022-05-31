@@ -12,6 +12,7 @@ def secante(x0,x1,tol,n,f):
         while error>tol and fx1 != 0 and den != 0 and i <n:
             x2 = x1 - ((fx1*(x1-x0))/den)
             error = np.abs(x2-x1)
+            Er = np.abs(error/x2)
             x0 = x1
             fx0 = fx1
             x1= x2
@@ -21,7 +22,7 @@ def secante(x0,x1,tol,n,f):
         if fx1 == 0:
             return x1 
         elif error<tol:
-             return [x1,"Eror de "+str(error)]
+             return [x1,"Error Absoluto de "+str(error), "Eror Relativo de "+str(Er)]
         elif den == 0:
             return "Posible raíz multiple"
         else:
