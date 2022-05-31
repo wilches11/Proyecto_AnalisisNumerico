@@ -605,8 +605,8 @@ def main():
         put_image('https://www.ighniz.com/wp-content/uploads/2018/05/wtf-meme-face-12-512x350.jpg')
         put_button('home',onclick=restart)
 
-
-
+# para poner la página online
+# pywebio.start_server(main, port=8080, debug=True,remote_access=True)
 main()
 
     
